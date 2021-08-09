@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+node_modules
+
+#Hardhat files
+cache
+artifacts
