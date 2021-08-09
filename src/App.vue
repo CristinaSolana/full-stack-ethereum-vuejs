@@ -2,7 +2,7 @@
   <div id="app" class="wrapper">
     <section class="logo-bar is-flex is-flex-align-items-center">
       <img class="logo" src="@/assets/logo-hardhat.svg">
-      <img class="logo margin-right" src="https://docs.ethers.io/v5/static/logo.svg">
+      <img class="logo margin-left" src="https://docs.ethers.io/v5/static/logo.svg">
       <img class="logo" src="@/assets/logo.png">
     </section>
     <header v-show="isShowingCurrentGreetingValue" class="margin-bottom">
@@ -110,9 +110,6 @@ button {
 }
 .margin-left {
   margin-left: 1rem;
-}
-.margin-right {
-  margin-right: 1rem;
 }
 .logo {
   max-height: 70px;
