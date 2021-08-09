@@ -1,22 +1,18 @@
 <template>
   <div id="app" class="wrapper">
-    <div class="is-flex">
-      <section class="sidebar">
-        <img class="logo" src="@/assets/eth-diamond-rainbow.png">
-      </section>
-      <main>
-        <header class="margin-bottom">
-          <h1>Greeting Smart Contract</h1>
-          <h2 v-show="isShowingCurrentGreetingValue">{{ currentGreetingValue }}</h2>
-        </header>
-        <div class="margin-bottom">
-          <button @click="fetchGreeting">Fetch Greeting</button>
-        </div>
-        <div>
-          <input type="text" v-model="greetingValue" placeholder="Set greeting" />    
-          <button class="margin-left" @click="setGreeting">Set Greeting</button>
-        </div>
-      </main>
+    <section class="logo-bar is-flex is-flex-align-items-center">
+      <img class="logo-vue" src="@/assets/logo.png">
+      <img class="logo-ethers" src="https://docs.ethers.io/v5/static/logo.svg">
+    </section>
+    <header v-show="isShowingCurrentGreetingValue" class="margin-bottom">
+      <h1>{{ currentGreetingValue }}</h1>
+    </header>
+    <div class="margin-bottom">
+      <button @click="fetchGreeting">Fetch Greeting</button>
+    </div>
+    <div>
+      <input type="text" v-model="greetingValue" placeholder="Set greeting" />    
+      <button class="margin-left" @click="setGreeting">Set Greeting</button>
     </div>
   </div>
 </template>
@@ -75,10 +71,11 @@ export default {
 
 <style>
 html, body {
+  background-color: #222f3e;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #bbb;
+  color: #fff;
 }
 h1 {
   margin-top: 0;
@@ -93,14 +90,19 @@ button {
   border: 0;
   border-radius: 4px;
   box-shadow: none;
-  background-color: #f60
+  background-color: #00d2d3;
 }
 .wrapper {
   padding: 4rem;
 }
+.logo-bar {
+  margin-bottom: 2.5rem
+}
 .is-flex {
   display: flex;
-  justify-content: center;
+}
+.is-flex-align-items-center {
+  align-items: center;
 }
 .margin-bottom {
   margin-bottom: 1.5rem;
@@ -108,10 +110,8 @@ button {
 .margin-left {
   margin-left: 1.5rem;
 }
-.sidebar {
-  padding-right: 4rem;
+.logo-vue, .logo-ethers {
+  max-height: 70px;
 }
-.logo {
-  max-width: 200px;
-}
+
 </style>
