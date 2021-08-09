@@ -1,8 +1,9 @@
 <template>
   <div id="app" class="wrapper">
     <section class="logo-bar is-flex is-flex-align-items-center">
-      <img class="logo-vue" src="@/assets/logo.png">
-      <img class="logo-ethers" src="https://docs.ethers.io/v5/static/logo.svg">
+      <img class="logo" src="@/assets/logo-hardhat.svg">
+      <img class="logo margin-right" src="https://docs.ethers.io/v5/static/logo.svg">
+      <img class="logo" src="@/assets/logo.png">
     </section>
     <header v-show="isShowingCurrentGreetingValue" class="margin-bottom">
       <h1>{{ currentGreetingValue }}</h1>
@@ -96,7 +97,7 @@ button {
   padding: 4rem;
 }
 .logo-bar {
-  margin-bottom: 2.5rem
+  margin-bottom: 2.5rem;
 }
 .is-flex {
   display: flex;
@@ -108,9 +109,12 @@ button {
   margin-bottom: 1.5rem;
 }
 .margin-left {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
-.logo-vue, .logo-ethers {
+.margin-right {
+  margin-right: 1rem;
+}
+.logo {
   max-height: 70px;
 }
 
